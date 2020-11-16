@@ -1,12 +1,12 @@
 <template>
-  <form>
+  <form @submit.prevent="procesarFormulario">
     <!-- Textbox -->
     <div class="mt-2">
       <input
         type="text"
         class="form-control my-2"
         placeholder="Ingrese nombre"
-        v-model="tarea.nombre"
+        v-model.trim="tarea.nombre"
         >
     </div>
     <!-- Checkbox -->
@@ -81,9 +81,14 @@
         v-model.number="tarea.numero"
         >
     </div>
+    <!-- Button -->
+    <button
+      class="btn btn-dark mt-2 btn-block"
+      type="submit"
+      >
+      Procesar
+    </button>
   </form>
-  <hr>
-  {{tarea}}
 </template>
 
 <script>
@@ -99,6 +104,11 @@ export default {
         estado: '',
         numero: 0
       }
+    }
+  },
+  methods: {
+    procesarFormulario() {
+      console.log(this.tarea);
     }
   },
 }
