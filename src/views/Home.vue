@@ -85,6 +85,7 @@
     <button
       class="btn btn-dark mt-2 btn-block"
       type="submit"
+      :disabled="isInvalidForm"
       >
       Procesar
     </button>
@@ -92,6 +93,7 @@
 </template>
 
 <script>
+import { reactive } from 'vue';
 export default {
   name: 'Home',
   components: {
@@ -104,6 +106,13 @@ export default {
         estado: '',
         numero: 0
       }
+    }
+  },
+  computed: {
+    isInvalidForm() {
+      return (
+        (this.tarea.nombre === '')
+      );
     }
   },
   methods: {
