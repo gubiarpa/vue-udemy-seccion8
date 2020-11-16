@@ -34,6 +34,39 @@
             Node.js
         </label>
       </div>
+
+      <div class="mt-2">
+        <!-- Urgente -->
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            id="rd-1"
+            value="urg"
+            v-model="tarea.estado"
+            class="form-check-input"
+            >
+          <label
+            for="rd-1"
+            class="form-check-label">
+            Urgente
+          </label>
+        </div>
+        <!-- Relax -->
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            id="rd-1"
+            value="rel"
+            v-model="tarea.estado"
+            class="form-check-input"
+            >
+          <label
+            for="rd-1"
+            class="form-check-label">
+            Relax
+          </label>
+        </div>
+      </div>
   </form>
   <hr>
   {{tarea}}
@@ -48,7 +81,8 @@ export default {
     return {
       tarea: {
         nombre: '',
-        categorias: []
+        categorias: [],
+        estado: ''
       }
     }
   },
