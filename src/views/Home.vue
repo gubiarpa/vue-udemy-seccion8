@@ -34,9 +34,9 @@
             Node.js
         </label>
       </div>
-      <hr>
-      {{tarea}}
   </form>
+  <hr>
+  {{tarea}}
 </template>
 
 <script>
@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       tarea: {
-        nombre: [],
+        nombre: '',
         categorias: []
       }
     }
