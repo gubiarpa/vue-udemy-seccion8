@@ -1,11 +1,16 @@
 <template>
   <form>
-    <input
-      type="text"
-      class="form-control my-2"
-      placeholder="Ingrese nombre"
-      v-model="tarea.nombre"
-      >
+    <!-- Textbox -->
+    <div class="mt-2">
+      <input
+        type="text"
+        class="form-control my-2"
+        placeholder="Ingrese nombre"
+        v-model="tarea.nombre"
+        >
+    </div>
+    <!-- Checkbox -->
+    <div class="mt-2">
       <!-- Javascript -->
       <div class="form-check form-check-inline">
         <input
@@ -34,39 +39,40 @@
             Node.js
         </label>
       </div>
-
-      <div class="mt-2">
-        <!-- Urgente -->
-        <div class="form-check form-check-inline">
-          <input
-            type="radio"
-            id="rd-1"
-            value="urg"
-            v-model="tarea.estado"
-            class="form-check-input"
-            >
-          <label
-            for="rd-1"
-            class="form-check-label">
-            Urgente
-          </label>
-        </div>
-        <!-- Relax -->
-        <div class="form-check form-check-inline">
-          <input
-            type="radio"
-            id="rd-1"
-            value="rel"
-            v-model="tarea.estado"
-            class="form-check-input"
-            >
-          <label
-            for="rd-1"
-            class="form-check-label">
-            Relax
-          </label>
-        </div>
+    </div>
+    <!-- Radiobutton -->
+    <div class="mt-2">
+      <!-- Urgente -->
+      <div class="form-check form-check-inline">
+        <input
+          type="radio"
+          id="rd-1"
+          value="urg"
+          v-model="tarea.estado"
+          class="form-check-input"
+          >
+        <label
+          for="rd-1"
+          class="form-check-label">
+          Urgente
+        </label>
       </div>
+      <!-- Relax -->
+      <div class="form-check form-check-inline">
+        <input
+          type="radio"
+          id="rd-1"
+          value="rel"
+          v-model="tarea.estado"
+          class="form-check-input"
+          >
+        <label
+          for="rd-1"
+          class="form-check-label">
+          Relax
+        </label>
+      </div>
+    </div>
   </form>
   <hr>
   {{tarea}}
